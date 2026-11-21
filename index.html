@@ -1,11 +1,269 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Habitly</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Habitly - A clean, modern habit tracking dashboard to build better habits one day at a time. CodGen Frontend Internship Week 1.">
+  <title>Habitly — Habit Tracker Dashboard</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Habitly</h1>
-    <h2>Created by Shyam Prasath</h2>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Section -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-group">
+        <div class="logo-icon" aria-hidden="true">
+          <span class="logo-emoji">⚡</span>
+        </div>
+        <div class="brand-text">
+          <h1 class="brand-name">Habitly</h1>
+          <p class="brand-subtitle">Build better habits, one day at a time.</p>
+        </div>
+      </div>
+      <div class="header-meta">
+        <div class="date-badge" aria-label="Current Date">
+          <span class="date-icon" aria-hidden="true">📅</span>
+          <span class="date-text">Saturday, 21 November</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Dashboard Content -->
+  <main id="main-content" class="main-container">
+
+    <!-- Summary Statistics Section -->
+    <section class="stats-section" aria-labelledby="stats-heading">
+      <div class="section-header">
+        <h2 id="stats-heading" class="section-title">Today's Progress Overview</h2>
+        <p class="section-subtitle">Snapshot of your daily momentum and habit consistency</p>
+      </div>
+
+      <div class="stats-grid">
+        <!-- Stat Card 1 -->
+        <article class="stat-card">
+          <div class="stat-card-header">
+            <span class="stat-label">Done Today</span>
+            <div class="stat-icon-wrapper" aria-hidden="true">
+              <span class="stat-icon">🎯</span>
+            </div>
+          </div>
+          <div class="stat-value-container">
+            <p class="stat-value">3/5</p>
+          </div>
+          <p class="stat-supporting-text">Habits completed today.</p>
+          <div class="stat-progress-track" aria-hidden="true">
+            <div class="stat-progress-bar" style="width: 60%;"></div>
+          </div>
+        </article>
+
+        <!-- Stat Card 2 -->
+        <article class="stat-card">
+          <div class="stat-card-header">
+            <span class="stat-label">Best Streak</span>
+            <div class="stat-icon-wrapper" aria-hidden="true">
+              <span class="stat-icon">🔥</span>
+            </div>
+          </div>
+          <div class="stat-value-container">
+            <p class="stat-value">12 Days</p>
+          </div>
+          <p class="stat-supporting-text">Your longest habit streak.</p>
+          <div class="stat-progress-track" aria-hidden="true">
+            <div class="stat-progress-bar" style="width: 80%;"></div>
+          </div>
+        </article>
+
+        <!-- Stat Card 3 -->
+        <article class="stat-card">
+          <div class="stat-card-header">
+            <span class="stat-label">This Week</span>
+            <div class="stat-icon-wrapper" aria-hidden="true">
+              <span class="stat-icon">📈</span>
+            </div>
+          </div>
+          <div class="stat-value-container">
+            <p class="stat-value">78%</p>
+          </div>
+          <p class="stat-supporting-text">Your weekly consistency.</p>
+          <div class="stat-progress-track" aria-hidden="true">
+            <div class="stat-progress-bar" style="width: 78%;"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Habit Cards Section -->
+    <section class="habits-section" aria-labelledby="habits-heading">
+      <div class="section-header">
+        <div class="section-header-left">
+          <h2 id="habits-heading" class="section-title">Active Habits</h2>
+          <p class="section-subtitle">Track your daily targets and nurture consistent routines</p>
+        </div>
+        <div class="habits-counter-badge" aria-label="6 active habits tracked">
+          <span>6 Habits Active</span>
+        </div>
+      </div>
+
+      <div class="habits-grid">
+        <!-- Habit Card 1: Reading -->
+        <article class="habit-card">
+          <div class="habit-card-top">
+            <div class="habit-icon-box" aria-hidden="true">
+              <span class="habit-emoji">📚</span>
+            </div>
+            <div class="streak-badge">
+              <span class="streak-flame" aria-hidden="true">⚡</span>
+              <span class="streak-text">7 Day Streak</span>
+            </div>
+          </div>
+          <div class="habit-card-body">
+            <h3 class="habit-title">Reading</h3>
+            <p class="habit-description">Read at least 20 pages of a non-fiction or educational book daily.</p>
+          </div>
+          <div class="habit-card-footer">
+            <button type="button" class="btn-complete" aria-label="Mark Reading habit as complete">
+              Complete
+            </button>
+          </div>
+        </article>
+
+        <!-- Habit Card 2: Drinking Water -->
+        <article class="habit-card">
+          <div class="habit-card-top">
+            <div class="habit-icon-box" aria-hidden="true">
+              <span class="habit-emoji">💧</span>
+            </div>
+            <div class="streak-badge">
+              <span class="streak-flame" aria-hidden="true">⚡</span>
+              <span class="streak-text">12 Day Streak</span>
+            </div>
+          </div>
+          <div class="habit-card-body">
+            <h3 class="habit-title">Drinking Water</h3>
+            <p class="habit-description">Hydrate with at least 2.5 liters of clean water throughout the day.</p>
+          </div>
+          <div class="habit-card-footer">
+            <button type="button" class="btn-complete" aria-label="Mark Drinking Water habit as complete">
+              Complete
+            </button>
+          </div>
+        </article>
+
+        <!-- Habit Card 3: Exercise -->
+        <article class="habit-card">
+          <div class="habit-card-top">
+            <div class="habit-icon-box" aria-hidden="true">
+              <span class="habit-emoji">🏋️</span>
+            </div>
+            <div class="streak-badge">
+              <span class="streak-flame" aria-hidden="true">⚡</span>
+              <span class="streak-text">5 Day Streak</span>
+            </div>
+          </div>
+          <div class="habit-card-body">
+            <h3 class="habit-title">Exercise</h3>
+            <p class="habit-description">Complete a 30-minute moderate workout including cardio and stretching.</p>
+          </div>
+          <div class="habit-card-footer">
+            <button type="button" class="btn-complete" aria-label="Mark Exercise habit as complete">
+              Complete
+            </button>
+          </div>
+        </article>
+
+        <!-- Habit Card 4: Coding Practice -->
+        <article class="habit-card">
+          <div class="habit-card-top">
+            <div class="habit-icon-box" aria-hidden="true">
+              <span class="habit-emoji">💻</span>
+            </div>
+            <div class="streak-badge">
+              <span class="streak-flame" aria-hidden="true">⚡</span>
+              <span class="streak-text">15 Day Streak</span>
+            </div>
+          </div>
+          <div class="habit-card-body">
+            <h3 class="habit-title">Coding Practice</h3>
+            <p class="habit-description">Solve coding challenges and work on frontend internship projects.</p>
+          </div>
+          <div class="habit-card-footer">
+            <button type="button" class="btn-complete" aria-label="Mark Coding Practice habit as complete">
+              Complete
+            </button>
+          </div>
+        </article>
+
+        <!-- Habit Card 5: Meditation -->
+        <article class="habit-card">
+          <div class="habit-card-top">
+            <div class="habit-icon-box" aria-hidden="true">
+              <span class="habit-emoji">🧘</span>
+            </div>
+            <div class="streak-badge">
+              <span class="streak-flame" aria-hidden="true">⚡</span>
+              <span class="streak-text">3 Day Streak</span>
+            </div>
+          </div>
+          <div class="habit-card-body">
+            <h3 class="habit-title">Meditation</h3>
+            <p class="habit-description">Engage in 10 minutes of peaceful mindful breathing and relaxation.</p>
+          </div>
+          <div class="habit-card-footer">
+            <button type="button" class="btn-complete" aria-label="Mark Meditation habit as complete">
+              Complete
+            </button>
+          </div>
+        </article>
+
+        <!-- Habit Card 6: Healthy Sleep (Supplementary 6th habit for balanced grid layout) -->
+        <article class="habit-card">
+          <div class="habit-card-top">
+            <div class="habit-icon-box" aria-hidden="true">
+              <span class="habit-emoji">😴</span>
+            </div>
+            <div class="streak-badge">
+              <span class="streak-flame" aria-hidden="true">⚡</span>
+              <span class="streak-text">9 Day Streak</span>
+            </div>
+          </div>
+          <div class="habit-card-body">
+            <h3 class="habit-title">Healthy Sleep</h3>
+            <p class="habit-description">Maintain a consistent bedtime schedule and rest for 8 full hours.</p>
+          </div>
+          <div class="habit-card-footer">
+            <button type="button" class="btn-complete" aria-label="Mark Healthy Sleep habit as complete">
+              Complete
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <p class="footer-text">
+        Built with the CodGen Frontend Internship | <a href="https://codgen.in" target="_blank" rel="noopener noreferrer"
+          class="footer-link">codgen.in</a>
+      </p>
+    </div>
+  </footer>
 </body>
+
 </html>
